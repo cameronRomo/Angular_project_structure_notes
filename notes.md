@@ -121,3 +121,8 @@
       - this prevents coupling a service to a component (new operator to instantiate will tightly couple to the component)
       - need to inject the dependency
         - register the dependency in the module in the providers property
+
+### Make a service in Angular
+- In terminal: `ng g s <serviceName>`
+  - creates the service file and a spec file with boilerplate for unit tests
+  
