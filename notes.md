@@ -102,3 +102,22 @@
 - Manipulates the DOM
 - `*ngFor` astrix decoration for directives that manipulates the DOM
   - this directive runs like a for of i.e. `<ul><li *ngFor="let course of courses">{{ course }}</li></ul>`
+
+### Services
+
+- Make a services class
+  - `courses.service.ts`
+  ```TypeScript
+  export class CoursesService {
+    getCourses() {
+      // Logic for consuming http services
+    }
+  }
+  ```
+- Back in component that needs to call service 
+  - import service class
+  - Call constructor in the component
+    - add parameter `constructor(service: CoursesService)` service is a dependency
+      - this prevents coupling a service to a component (new operator to instantiate will tightly couple to the component)
+      - need to inject the dependency
+        - register the dependency in the module in the providers property
