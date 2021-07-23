@@ -46,3 +46,29 @@
 - Build automation tool
 - Gets all scripts and styles compiles into a bundle and then minifies
 - Webpack automatically re-compiles app with each new piece of code
+
+### Components 
+1) Create a component
+  - `<component name>.component.ts`
+    ```TypeScript
+      import { Component } from '@angular/core';
+
+      @Component({
+        selector: '',
+        template: '<h2>Courses</h2>
+      })
+      export class <ComponentName>
+    ```
+
+2) Register it in a module
+  - Converts a TS class into a module from Anugular's view
+  `@NgModule`: contains all the components that are part of the module
+    - New component goes into the declarations property
+3) Add an element in an HTML markup
+  - In `app.component.html` add custom component (app-root inside index.html)
+
+** Can use Angular CLI to create a component too: `ng g c <componentName>`
+                                                     1^2^
+  - 1 = generate & 2 = component
+    - Angular will create .css, .html, .spec.ts, and .ts files
+      - Also updates app.module.ts in `@NgModule`
