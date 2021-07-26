@@ -240,7 +240,7 @@ export class CoursesComponent {
   }
 ```
 
-- or Two-way Binding - much better!
+#### or Two-way Binding - much better!
 
 ```TypeScript
   <input [value]="email" (keyup.enter)=" email = $event.target.value onKeyUp()"/> // better
