@@ -168,7 +168,7 @@
 - When you want to add multiple classes to an element
   - i.e.
     ```TypeScript
-      <button class="btn btn-primary" [class.active]="false"></button>
+      <button class="btn btn-primary" [class.active]="false">Save</button>
     ```
     - The first two classes will always be constant, but the second class will change based on some condition.
 
@@ -177,5 +177,29 @@
 - Similar to class binding, here you access the dom styles object to add styling
   - i.e.
   ```TypeScript
-      <button [style.backgroundColor]="isActive ? 'blue' : 'white'"></button> // make sure properties are in single quotes.
+      <button [style.backgroundColor]="isActive ? 'blue' : 'white'">Save</button> // make sure properties are in single quotes.
+  ```
+
+### Event Binding
+
+- Use to handle events raised from the DOM
+- `$event` is recognized by angular to access the event
+
+  - i.e.
+
+  ```TypeScript
+      <div (click)="onDivClicked()">
+        <button (click)="onSave($event)">Save</button>
+      </div>
+
+    export class CoursesComponent {
+      onDivClicked() {
+        console.log('Div was clicked')
+      }
+
+      onSave($event) {
+        $event.stopPropagation(); // If you do not want your event to propagate
+        console.log("Button clicked", $event);
+      }
+    }
   ```
