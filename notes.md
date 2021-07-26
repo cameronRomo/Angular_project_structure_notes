@@ -134,6 +134,7 @@
   - The DOM is a model of objects that represent the structure of a document in memory
 - Most HTML attributes have a 1:1 mapping to DOM properties, however there are some exceptions
 - ex:
+
   ```TypeScript
   // Does not work because there is not a DOM property called callspan
   ` <table>
@@ -141,7 +142,7 @@
         <td [callspan]="2"></td>
       </tr>
     </table>`
-    
+
   // Does work because `attr.callspan` is telling Angular to target the callspan attribute of an HTML element
     ` <table>
       <tr>
@@ -149,3 +150,15 @@
       </tr>
     </table>`
   ```
+
+### Adding Bootstrap to Angular
+
+- `npm i bootstrap --save` (--save adds to the package.json)
+
+  - Helps to enable other developers to quickly install the dependencies instead of looking through the `node_modules` folder
+
+- Go to `styles.css`
+  - `@import "~bootstrap/dist/css/bootstrap.css"` (Path found in node_modules under bootstrap)
+  - In the demonstration the button from bootstrap was cut in half from the side of the screen
+  - To fix this, in the `styles.css` folder add styles pertaining to the box model:
+    - i.e `body { padding: 20px; }`
