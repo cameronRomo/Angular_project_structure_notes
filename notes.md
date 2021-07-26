@@ -203,3 +203,24 @@
       }
     }
   ```
+
+### Event Filtering
+
+- i.e.
+
+```TypeScript
+  <input (keyup)="onKeyUp($event)"/>
+
+export class CoursesComponent {
+  onKeyUp($event) {
+    if ($event.keyCode === 13) console.log("ENTER was pressed")
+  }
+//or cleaner way with filtering
+
+  <input (keyup.enter)="onKeyUp()"/>
+
+export class CoursesComponent {
+onKeyUp() {
+  console.log("ENTER was pressed")
+}
+```
