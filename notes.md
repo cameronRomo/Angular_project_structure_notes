@@ -261,3 +261,35 @@ imports: [
   FormsModule
 ],
 ```
+
+### Pipes
+
+- Helps to format data on the screen to help readability/familiarity for users
+  - Found in the `@angular/common` module
+
+### Custom Pipes
+
+- To make:
+
+  - `./app`
+  - `<pipeName>.pipe.ts`
+  - `import { pipe, pipeTransform } from '@angular/core'`
+
+    ````TypeScript
+    @Pipe({
+      name: 'summary'
+    })
+    export class SumaryPipe implements PipeTransform {
+      transform(value: any, args?: any){
+        if (!value)
+          return null;
+
+        let actualLimit = (limit) ? limit: 50;
+        return value.substr(0, 50) + '...';
+      }
+    }
+    ```
+    ````
+
+  - must register in `app.module`
+    - In declaration property add: `SummaryPipe (<pipeName>)` and import
