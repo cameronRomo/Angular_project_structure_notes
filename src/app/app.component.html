@@ -1,3 +1,12 @@
 <h1>Angular</h1>
-<authors></authors>
-<favorite></favorite>
+<div>
+  <authors></authors>
+</div>
+<div>
+  <favorite></favorite>
+</div>
+<div>
+  <input type="text" [(ngModel)]="title"/>
+  <br>
+  {{ title | titleCase }}
+</div>
