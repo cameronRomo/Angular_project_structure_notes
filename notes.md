@@ -114,7 +114,7 @@
     }
   }
   ```
-- Back in component that needs to call service 
+- Back in component that needs to call service
   - import service class
   - Call constructor in the component
     - add parameter `constructor(service: CoursesService)` service is a dependency
@@ -123,6 +123,29 @@
         - register the dependency in the module in the providers property
 
 ### Make a service in Angular
+
 - In terminal: `ng g s <serviceName>`
   - creates the service file and a spec file with boilerplate for unit tests
-  
+
+### Attribute binding
+
+- Difference between HTML and DOM
+  - HTML is a mark up language representing the structure of a page
+  - The DOM is a model of objects that represent the structure of a document in memory
+- Most HTML attributes have a 1:1 mapping to DOM properties, however there are some exceptions
+- ex:
+  ```TypeScript
+  // Does not work because there is not a DOM property called callspan
+  ` <table>
+      <tr>
+        <td [callspan]="2"></td>
+      </tr>
+    </table>`
+    
+  // Does work because `attr.callspan` is telling Angular to target the callspan attribute of an HTML element
+    ` <table>
+      <tr>
+        <td [attr.callspan]="2"></td>
+      </tr>
+    </table>`
+  ```
