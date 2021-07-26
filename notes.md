@@ -162,3 +162,20 @@
   - In the demonstration the button from bootstrap was cut in half from the side of the screen
   - To fix this, in the `styles.css` folder add styles pertaining to the box model:
     - i.e `body { padding: 20px; }`
+
+### Class Binding
+
+- When you want to add multiple classes to an element
+  - i.e.
+    ```TypeScript
+      <button class="btn btn-primary" [class.active]="false"></button>
+    ```
+    - The first two classes will always be constant, but the second class will change based on some condition.
+
+### Style Binding
+
+- Similar to class binding, here you access the dom styles object to add styling
+  - i.e.
+  ```TypeScript
+      <button [style.backgroundColor]="isActive ? 'blue' : 'white'"></button> // make sure properties are in single quotes.
+  ```
