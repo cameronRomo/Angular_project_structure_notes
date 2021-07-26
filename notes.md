@@ -220,7 +220,44 @@ export class CoursesComponent {
   <input (keyup.enter)="onKeyUp()"/>
 
 export class CoursesComponent {
-onKeyUp() {
-  console.log("ENTER was pressed")
-}
+  onKeyUp() {
+    console.log("ENTER was pressed")
+  }
+```
+
+### Template Variables
+
+- Angular provides a way to target the value of an input using template variables
+  - Helps to simplify code
+  - i.e.
+
+```TypeScript
+  <input #email (keyup.enter)="onKeyUp(email.value)"/>
+
+export class CoursesComponent {
+  onKeyUp(email) { // bad practice passing email parameter around (procedural programming = outdated)
+    console.log(email)
+  }
+```
+
+- or Two-way Binding - much better!
+
+```TypeScript
+  <input [value]="email" (keyup.enter)=" email = $event.target.value onKeyUp()"/> // better
+  <input [(ngModel)]="email" (keyup.enter)="onKeyUp()"/> // best! Uses ngModel directive from Angular. Needs to have its module imported in the app.modules folder -> see below!
+
+export class CoursesComponent {
+  email;
+
+  onKeyUp() {
+    console.log(this.email)
+  }
+
+// in app.modules.ts
+import { FormsModule } from '@angular/forms'
+
+// in the imports property (array) add `FormsModule`
+imports: [
+  FormsModule
+],
 ```
