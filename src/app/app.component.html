@@ -3,7 +3,7 @@
   <authors></authors>
 </div>
 <div>
-  <favorite></favorite>
+  <favorite [isFavorite]="post.isFavorite" (change)="onFavoriteChanged($event)"></favorite>
 </div>
 <div>
   <input type="text" [(ngModel)]="title"/>
