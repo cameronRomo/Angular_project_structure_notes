@@ -11,6 +11,7 @@ import { PanelComponent } from './panel/panel.component';
 import { LikeComponent } from './like/like.component';
 import { IfComponent } from './if/if.component';
 import { SwitcherComponent } from './switcher/switcher.component';
+import { ForComponent } from './for/for.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { SwitcherComponent } from './switcher/switcher.component';
     PanelComponent,
     LikeComponent,
     IfComponent,
-    SwitcherComponent
+    SwitcherComponent,
+    ForComponent
   ],
   imports: [
   BrowserModule,
