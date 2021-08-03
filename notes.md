@@ -295,6 +295,7 @@ imports: [
     - In declaration property add: `SummaryPipe (<pipeName>)` and import
 
 ### Directives
+- Identified by the leading astrix
 
 ###### ngIf
 
@@ -314,3 +315,7 @@ imports: [
 ###### ngFor
 
 - Similar to `for of` loop i.e: `<li> *ngFor="let course of courses; <options-for-local-variables>"</li>`
+
+###### ngClass
+
+- Makes it so you don't need to add class binding multiple times
