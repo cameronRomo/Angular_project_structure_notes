@@ -325,3 +325,8 @@ imports: [
 
 - Works like `ngClass`
   - If you need to add styles in the mark up, allows you to do it without binding to many properties
+
+###### Safe Traversal Operator `?`
+
+- Use this operator when working with complex objects
+  - If what's after the operator is null then it will not add it tot he element
