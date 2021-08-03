@@ -16,6 +16,7 @@ import { StyleComponent } from './style/style.component';
 import { TaskComponent } from './task/task.component';
 import { InputFormatDirective } from './input-format.directive';
 import { CustomComponent } from './custom/custom.component';
+import { ZippyComponent } from './zippy/zippy.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { CustomComponent } from './custom/custom.component';
     StyleComponent,
     TaskComponent,
     InputFormatDirective,
-    CustomComponent
+    CustomComponent,
+    ZippyComponent
   ],
   imports: [
   BrowserModule,
