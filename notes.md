@@ -330,3 +330,14 @@ imports: [
 
 - Use this operator when working with complex objects
   - If what's after the operator is null then it will not add it tot he element
+
+###### Custom Directives
+
+- Command line: `ng g d <name-of-directive>`
+- Go to directive and import HostListener
+  - gives you access to the native DOM element
+- Decorate the methods with the `@HostListener('blur')` and provide the argument relevant to the DOM attribute in this case 'blur'
+- to access the native element use dot-notation i.e `this.el.nativeElement.value`
+- Add functionality
+- Use `@Input` to mark as an input property to help with the formatting
+  - Bind to that Input property
