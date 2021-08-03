@@ -18,7 +18,6 @@ export class AppComponent {
     isFavorite: false,
   };
   title: string = '';
-
   onFavoriteChanged(eventArgs: FavoriteChangedEventArgs) {
     console.log(eventArgs);
   }
