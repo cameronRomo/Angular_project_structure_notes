@@ -10,6 +10,7 @@ import { TitleCasePipe } from './title-case.pipe';
 import { PanelComponent } from './panel/panel.component';
 import { LikeComponent } from './like/like.component';
 import { IfComponent } from './if/if.component';
+import { SwitcherComponent } from './switcher/switcher.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { IfComponent } from './if/if.component';
     TitleCasePipe,
     PanelComponent,
     LikeComponent,
-    IfComponent
+    IfComponent,
+    SwitcherComponent
   ],
   imports: [
   BrowserModule,
