@@ -14,6 +14,8 @@ import { SwitcherComponent } from './switcher/switcher.component';
 import { ForComponent } from './for/for.component';
 import { StyleComponent } from './style/style.component';
 import { TaskComponent } from './task/task.component';
+import { InputFormatDirective } from './input-format.directive';
+import { CustomComponent } from './custom/custom.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +29,9 @@ import { TaskComponent } from './task/task.component';
     SwitcherComponent,
     ForComponent,
     StyleComponent,
-    TaskComponent
+    TaskComponent,
+    InputFormatDirective,
+    CustomComponent
   ],
   imports: [
   BrowserModule,
