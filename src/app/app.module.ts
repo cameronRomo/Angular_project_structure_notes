@@ -13,6 +13,7 @@ import { IfComponent } from './if/if.component';
 import { SwitcherComponent } from './switcher/switcher.component';
 import { ForComponent } from './for/for.component';
 import { StyleComponent } from './style/style.component';
+import { TaskComponent } from './task/task.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { StyleComponent } from './style/style.component';
     IfComponent,
     SwitcherComponent,
     ForComponent,
-    StyleComponent
+    StyleComponent,
+    TaskComponent
   ],
   imports: [
   BrowserModule,
