@@ -1,6 +1,7 @@
 <button (click)="onAdd()">Add</button>
+<button (click)="loadMoreCourses()">Load More Courses</button>
 <ul>
-  <li *ngFor="let course of courses; even as isEven">
+  <li *ngFor="let course of courses; even as isEven; trackBy: trackCourse">
     {{ course.name}} 
     <span *ngIf="isEven">(EVEN)</span>
     <button (click)="onRemove(course)">Remove</button>
