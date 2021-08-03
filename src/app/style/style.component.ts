@@ -1,15 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-style',
+  selector: 'style',
   templateUrl: './style.component.html',
   styleUrls: ['./style.component.css']
 })
-export class StyleComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
+export class StyleComponent {
+  canSave = true;
 }
