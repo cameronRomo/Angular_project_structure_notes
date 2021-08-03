@@ -293,3 +293,14 @@ imports: [
 
   - must register in `app.module`
     - In declaration property add: `SummaryPipe (<pipeName>)` and import
+
+### Directives
+
+###### ngIf
+
+- Similar to conditional render in React
+  - If the value evaluates to truthy than it will be added to the DOM
+- Directive is called using `*ngIf` and assigning it to a condition. depending on the return value one `<ng-template>` will render
+  - Identify the `<ng-template>` using a hashtag
+- Or the hidden attribute can be used as well.
+  - `ngIf` is preferred especially with a large tree application
