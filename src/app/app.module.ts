@@ -12,6 +12,7 @@ import { LikeComponent } from './like/like.component';
 import { IfComponent } from './if/if.component';
 import { SwitcherComponent } from './switcher/switcher.component';
 import { ForComponent } from './for/for.component';
+import { StyleComponent } from './style/style.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { ForComponent } from './for/for.component';
     LikeComponent,
     IfComponent,
     SwitcherComponent,
-    ForComponent
+    ForComponent,
+    StyleComponent
   ],
   imports: [
   BrowserModule,
