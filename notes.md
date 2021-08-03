@@ -310,3 +310,7 @@ imports: [
 - In `component.html` bind `ngSwitch` to the related property of the component i.e: `[ngSwitch]="<propertyToBindTo>"`
   - As children to the above element, add the `*ngSwitchCase` directive and assign it to a specific value i.e: `*ngSwitchCase="'map'"`
 - Link to some interactive elements and use class binding to help highlight the related tab/button then, in it's anchor call a function/method to toggle the values i.e: `<li [class.active]="viewMode == 'map'"><a (click)="viewMode = 'map'"></a></li>`
+
+###### ngFor
+
+- Similar to `for of` loop i.e: `<li> *ngFor="let course of courses; <options-for-local-variables>"</li>`
