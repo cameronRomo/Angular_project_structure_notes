@@ -295,6 +295,7 @@ imports: [
     - In declaration property add: `SummaryPipe (<pipeName>)` and import
 
 ### Directives
+
 - Identified by the leading astrix
 
 ###### ngIf
@@ -319,3 +320,8 @@ imports: [
 ###### ngClass
 
 - Makes it so you don't need to add class binding multiple times
+
+###### ngStyle
+
+- Works like `ngClass`
+  - If you need to add styles in the mark up, allows you to do it without binding to many properties
