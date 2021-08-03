@@ -304,3 +304,9 @@ imports: [
   - Identify the `<ng-template>` using a hashtag
 - Or the hidden attribute can be used as well.
   - `ngIf` is preferred especially with a large tree application
+
+###### ngSwitchCase
+
+- In `component.html` bind `ngSwitch` to the related property of the component i.e: `[ngSwitch]="<propertyToBindTo>"`
+  - As children to the above element, add the `*ngSwitchCase` directive and assign it to a specific value i.e: `*ngSwitchCase="'map'"`
+- Link to some interactive elements and use class binding to help highlight the related tab/button then, in it's anchor call a function/method to toggle the values i.e: `<li [class.active]="viewMode == 'map'"><a (click)="viewMode = 'map'"></a></li>`
