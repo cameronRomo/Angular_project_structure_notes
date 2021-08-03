@@ -20,4 +20,12 @@ export class ForComponent {
     let index = this.courses.indexOf(course);
     this.courses.splice(index, 1);
   }
+
+  loadMoreCourses() {
+    this.courses.push({ id: 4, name: 'course4' }, { id: 5, name: 'course5' }, { id: 6, name: 'course6' })
+  }
+
+  trackCourse(index: number, course: any) {
+    return course ? course.id : undefined;
+  }
 }
