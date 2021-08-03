@@ -1,15 +1,15 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-task',
+  selector: 'task',
   templateUrl: './task.component.html',
   styleUrls: ['./task.component.css']
 })
-export class TaskComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
+export class TaskComponent {
+  task = {
+    title: 'Review applications',
+    assignee: {
+      name: 'Cameron'
+    }
+  };
 }
